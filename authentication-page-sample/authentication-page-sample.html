@@ -1,0 +1,119 @@
+<div class="grid lr-hostr-container">
+
+    <div id="lr-raas-message" class="loginradius-raas-success-message"></div>
+    <div class="grid lr-hostr-frame cf">
+
+        <!--
+        *
+        *
+        * SOCIAL LOGIN
+        * ".lr-sample-background-enabled" enables a look and feel of the social login with a backdrop other than grey.
+        -->
+        <div id="lr-social-login" class="lr-social-login-frame lr-frames lr-sample-background-enabled cf">
+
+            <h2 class="lr-social-login-message">Login with your social accounttest</h2>
+            <p class="lr-social-login-subnote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, corporis fugiat sed excepturi?</p>
+
+            <div id="interfacecontainerdiv" class="lr-sl-shaded-brick-frame cf lr-widget-container">
+            </div>
+
+            <script type="text/html" id="loginradiuscustom_tmpl">
+
+              <span class="lr-provider-label lr-sl-shaded-brick-button lr-flat-<#=Name.toLowerCase()#>"
+                    onclick="return LRObject.util.openWindow('<#= Endpoint #>&is_access_token=true&callback=<#= window.location.href #>'); "
+                    title="Sign up with <#= Name #>" alt="Sign in with <#= Name#>">
+                   <span class="lr-sl-icon lr-sl-icon-<#= Name.toLowerCase()#>"></span>
+                   Login with <#= Name#>
+                    </span>
+
+            </script>
+        </div>
+
+        <div class="lr-frames lr-forms-container">
+            <!--
+            *
+            *
+            * TRADITIONAL LOGIN PAGE
+            -->
+            <div id="lr-traditional-login" class="lr-form-frame">
+
+                <h2 class="lr-form-login-message">...or login with your email</h2>
+                <p class="lr-form-login-subnote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, corporis fugiat sed excepturi?</p>
+
+                <div id="login-container" class="lr-widget-container">
+                </div>
+                <div class="lr-link-box">
+                    <a class="lr-raas-forgot-password">Forgot password?</a>
+                    <a class="lr-register-link">Create Account</a>
+                </div>
+            </div>
+
+            <!--
+            *
+            *
+            * USER REGISTRATION
+            -->
+            <div id="lr-raas-registartion" class="lr-form-frame">
+
+                <h2 class="lr-form-login-message">...or create an account</h2>
+                <p class="lr-form-login-subnote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, corporis fugiat sed excepturi?</p>
+
+                <div id="registration-container" class="lr-widget-container">
+                </div>
+
+                <div class="lr-link-box">
+                    <a class="lr-raas-forgot-password">Forgot password?</a>
+                    <a class="lr-raas-login-link">Login</a>
+                </div>
+            </div>
+
+            <!--
+            *
+            *
+            * FORGOT PASS
+            -->
+            <div id="lr-raas-forgotpassword" class="lr-form-frame">
+
+                <h2 class="lr-form-login-message">Forgot Password</h2>
+                <p class="lr-form-login-subnote">We'll email you an instruction on how to reset your password.</p>
+
+                <div id="forgotpassword-container" class="lr-widget-container">
+                </div>
+
+                <div class="lr-link-box">
+                    <a class="lr-raas-login-link">Login</a>
+                    <a class="lr-register-link">Create Account</a>
+                </div>
+            </div>
+
+            <div id="lr-raas-sociallogin" class="lr-form-frame" >
+
+                <h2 class="lr-form-login-message">Complete your profile</h2>
+                <p class="lr-form-login-subnote">Require to fill all mandatory fields.</p>
+
+                <div id="sociallogin-container" class="lr-widget-container">
+                </div>
+
+            </div>
+
+            <div id="lr-raas-resetpassword" class="lr-form-frame">
+
+                <h2 class="lr-form-login-message">Reset your Password</h2>
+                <p class="lr-form-login-subnote">Reset your password to get back access of your account</p>
+
+                <div id="resetpassword-container" class="lr-widget-container">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Loading screen -->
+<div class="lr_fade lr-loading-screen-overlay" id="loading-spinner">
+    <div class='load-dot'></div>
+    <div class='load-dot'></div>
+    <div class='load-dot'></div>
+    <div class='load-dot'></div>
+</div>

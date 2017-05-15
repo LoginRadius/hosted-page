@@ -1,0 +1,183 @@
+<div class="grid lr-hostr-container lr-hostr-logged-in">
+<div id="lr-raas-message" class="loginradius-raas-success-message"></div>
+<div class="grid lr-hostr-frame cf">
+
+ <!--
+ *
+ *
+ * Main Profile
+ *
+ -->
+ <div class="lr-profile-frame lr-social-login-frame lr-frames lr-sample-background-enabled cf">
+
+     <div class="lr-profile-image">
+         <img alt="">
+     </div>
+
+     <h1 class="lr-profile-name"></h1>
+     <div class="lr-profile-info">
+         <p></p>
+     </div>
+
+     <!--
+     *
+     * social account linking -->
+     <div class="lr-link-social-container">
+         <!--
+         *
+         * linked social accounts -->
+         <div class="lr-linked-social-frame" id="lr-linked-social">
+             <h5 class="lr-heading">Linked social accounts</h5>
+
+         </div>
+         <script type="text/html" id="linkedAccountsTemplate">
+             <# if(isLinked) { #>
+                 <div class="lr-social-account">
+                     <span class="lr-social-icon lr-flat-<#= Name.toLowerCase() #> button-shade lr-sl-icon lr-sl-icon-<#= Name.toLowerCase() #>"></span>
+                     <span class="lr-social-info"><#= Name #></span>
+                     <span class="lr-social-unlink"><a onclick='return window["loginradiusv1"]? unLinkAccount(\"<#= Name.toLowerCase() #>\",\"<#= providerId #>\") : LRObject.util.unLinkAccount(\"<#= Name.toLowerCase() #>\",\"<#= providerId #>\")'>Unlink</a></span>
+                 </div>
+                 <# } #>
+         </script>
+
+         <!--
+         *
+         * not linked social accounts -->
+         <div class="lr-not-linked-social-frame" id="lr-not-linked-social">
+
+             <h5 class="lr-heading">Link more social accounts</h5>
+
+
+         </div>
+
+         <script type="text/html" id="notLinkedAccountsTemplate">
+             <# if(!isLinked) { #>
+                 <span class="lr-social-icon lr-flat-<#= Name.toLowerCase() #> button-shade lr-sl-icon lr-sl-icon-<#= Name.toLowerCase() #>"
+                       onclick='LRObject.util.openWindow("<#= Endpoint #>");'></span>
+                 <# } #>
+         </script>
+     </div>
+
+     <!--
+     *
+     * Menu
+     * This holds the logout and account settings -->
+     <div class="lr-menu lr-account-menu">
+         <div class="lr-menu-button"></div>
+         <div class="lr-menu-list-frame">
+             <a class="lr-settings lr-menu-list lr-show-settings" data-query="lr-edit-profile">Edit Profile</a>
+
+             <a class="lr-settings lr-menu-list lr-show-settings" data-query="lr-change-password">Change Password</a>
+
+             <a class="lr-settings lr-menu-list lr-show-settings" data-query="lr-account-settings">Account Settings</a>
+
+             <a class="lr-logout lr-menu-list" href="auth.aspx?action=logout">Logout</a>
+         </div>
+     </div>
+
+ </div>
+
+ <div class="lr-frames lr-more-info-container">
+     <!--
+     *
+     *
+     * Profile More Info
+     -->
+     <div class="lr-more-info-frame">
+
+         <div class="lr-more-info-heading">
+             <h2>My Profile</h2>
+
+             <div class="lr-edit-profile lr-button outline-grey lr-show-settings" data-query="lr-edit-profile">Edit</div>
+         </div>
+         <!-- .lr-content-section -->
+         <div class="lr-content-section cf" id="profile-viewer">
+         </div>
+         <!-- .lr-content-section END -->
+     </div>
+     <script type="text/html" id="profileViewTemplate">
+         <# if(typeof value !="undefined" ) { #>
+             <div class="lr-content-group">
+                 <h6 class="lr-label"><#= display #></h6>
+                 <div class="lr-data"><#= value #></div>
+             </div>
+             <!-- .lr-content-group -->
+             <# } #>
+     </script>
+
+     <!--
+     *
+     *
+     * More Menu Frame
+      -->
+
+     <div class="lr-more-menu-contents">
+
+         <!--
+         *
+         *
+         * Edit Profile
+          -->
+
+         <div id="lr-edit-profile" class="lr-more-menu-frame lr-edit-profile lr-account-settings">
+
+             <div class="lr-more-info-heading">
+                 <h2>Edit My Profile</h2>
+                 <a id="lr-close" class="lr-close">&times;</a>
+             </div>
+             <div class="lr-editable-fields-frame" id="profile-editor-container">
+             </div>
+         </div>
+
+         <!--
+         *
+         *
+         * Account Settings
+          -->
+
+         <div id="lr-account-settings" class="lr-more-menu-frame lr-account-settings">
+
+             <div class="lr-more-info-heading">
+                 <h2>Account Settings</h2>
+                 <a id="lr-close" class="lr-close">&times;</a>
+             </div>
+
+             <div class="lr-account-settings-frame">
+                 <h5 class="lr-setting-label">Delete Account</h5>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta architecto aliquid sit aspernatur officia, quam.</p>
+                 <div class="lr-action-box">
+                     <a class="lr-button white button-shade" href="javascript:void(0)" onclick="deleteAccount();">Delete my account</a>
+                 </div>
+             </div>
+
+         </div>
+
+         <!--
+         *
+         *
+         * Change Password
+          -->
+
+         <div id="lr-change-password" class="lr-more-menu-frame lr-field-editor lr-change-password lr-account-settings">
+
+             <div class="lr-more-info-heading">
+                 <h2>Change Password</h2>
+                 <a id="lr-close" class="lr-close">&times;</a>
+             </div>
+             <div class="lr-editable-fields-frame" id="change-password">
+             </div>
+             <div class="lr-editable-fields-frame" id="set-password">
+             </div>
+         </div>
+     </div>
+ </div>
+</div>
+</div>
+
+<!-- Loading screen -->
+<div class="lr_fade lr-loading-screen-overlay" id="loading-spinner">
+<div class='load-dot'></div>
+<div class='load-dot'></div>
+<div class='load-dot'></div>
+<div class='load-dot'></div>
+</div>
