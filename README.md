@@ -11,14 +11,14 @@ LoginRadius helps businesses boost user engagement on their web/mobile platform,
 Please visit [here](http://www.loginradius.com/) for more information.
 
 ## Requirements
-You'll need to have the LoginRadius V2 Hosted Page enabled for your account, please contact LoginRadius Support for more details.
+You'll need to have the LoginRadius Hosted Page enabled for your account, please contact LoginRadius Support for more details.
 
 
 ## Installation and Documentation
 This repo contains the default scripts and content for the LoginRadius Hosted Page.
 
 If you're looking to customize your own hosted page we recommend downloading these files
-to your desktop and editing them to your needs. You can find our step-by-step guide to customization [here](https://docs.loginradius.com/api/v2/user-registration/hosted-registration) for more information.
+to your desktop and editing them to your needs. You can find our step-by-step guide to customization [here](https://docs.loginradius.com/api/v1/user-registration/user-registration-getting-started) for more information.
 
 
 
