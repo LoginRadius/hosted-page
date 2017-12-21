@@ -1,0 +1,33 @@
+  .button{ 
+    background-color: ForestGreen;  
+    border-radius: 5px;
+    color: white;
+    padding: .5em;
+    text-decoration: none;
+  }
+  
+  .iframe{
+   border: 0 !important;
+    /* width: 100%;
+    height: 70%; */                                                             
+    margin: 0 auto;
+  }
+  
+  .hide{
+   display:none;
+ }
+
+ .result{
+   border:1px solid;border-radius:5px;margin-top: 20px;height: auto;margin-bottom:20px;
+ }
+
+ .disable-button{
+  background-color: #808080;  
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+  cursor:no-drop;
+
+}
+}
