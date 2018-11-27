@@ -1,0 +1,29 @@
+<html>
+<body>
+<head>
+<script type="text/javascript" src="../parent-page-files/LoginRadiusV2.iframeSDK.min.js"></script>
+<script type="text/javascript" src="../parent-page-files/iframeSDK-Options.js"></script>
+</head>
+
+<div id="register-iframe"></div>
+<div id="result" class="result"> </div>
+
+<script type="text/javascript">
+
+  var ciamwidget_obj = new LoginRadiusCiamWidget(LRConfigObj, LRCommonOptions);
+  ciamwidget_obj.render('register','register-iframe', 'auth.aspx', function(response){
+       /* -- you will get response object ,write your code here to handle success -- */
+
+        console.log(JSON.stringify(response));
+  },
+  function(error){
+      /* -- write your code here to handle error --*/
+
+      document.getElementById("result").innerHTML = "Error : " + JSON.stringify(error);
+
+    });
+</script>
+
+
+</body>
+</html>

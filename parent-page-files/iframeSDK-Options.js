@@ -1,13 +1,18 @@
 //declaring the global reusable object
+
 var LRConfigObj = {
-	'appName': '', /* Your APP Name */
-	iframeSettings : {
+	'appName': '', /* Your LoginRadius APP Name */
+  'iframeSettings': {
 		height : '85%',
 		width : '100%',
 		class : 'iframe'
-	},
-	'customdomain': ''/* Enter Your Custom Domain If Want To Use Instead Of LoginRadius Hosted Page URL i.e https://example.com */
-}
+  }//,
+  /* Enter Your Custom Domain If Want To Use Instead Of LoginRadius Hosted Page URL i.e https://example.com */
+//  'customdomain': ''
+	}
+
+//This object can be used to pass additional data to the hosted page, please leave empty if unsure.
+var LRCommonOptions = {}
 
 // declaring common functions
 function getUrlParameteronpage(sParam) {

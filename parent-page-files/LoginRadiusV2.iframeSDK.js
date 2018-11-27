@@ -1,5 +1,8 @@
-var LoginRadiusCiamWidget = function(ConfigOption) {
+var LoginRadiusCiamWidget = function(ConfigOption,CommonOptions) {
 	var module = this;
+	var commonoptions={};
+	if(CommonOptions)
+		commonoptions=CommonOptions;
    // defining the iframe options
 	var LRIframeOption = {
 		'height': ConfigOption.iframeSettings.height || '85%',
@@ -98,7 +101,7 @@ var LoginRadiusCiamWidget = function(ConfigOption) {
 			return t
 		}
 	}
-	var LROptionString = Base64.encode(JSON.stringify(ConfigOption));
+	var LROptionString = Base64.encode(JSON.stringify(commonoptions));
 
 	var callbacks = {};
 
@@ -126,18 +129,18 @@ var LoginRadiusCiamWidget = function(ConfigOption) {
 		var LRVtoken = LRGetUrlParameter('vtoken') || '';
 		if (LRVtype && LRVtoken) {
 			if(ConfigOption.customdomain){ 
-             LRIframe.src = "https://" + ConfigOption.customdomain + '/'+ pagetype +'?action=' + action + "&s=" + LROptionString + "&vtype=" + LRVtype + "&vtoken=" + LRVtoken;
+             LRIframe.src = "https://" + ConfigOption.customdomain + '/'+ pagetype +'?action=' + action + "&s=" + LROptionString + "&vtype=" + LRVtype + "&vtoken=" + LRVtoken+"&return_url="+encodeURIComponent("https://" + ConfigOption.customdomain + '/'+ "profile.aspx" +'?action=' + action + "&s=" + LROptionString + "&vtype=" + LRVtype + "&vtoken=" + LRVtoken);
 			}else{ 
-			LRIframe.src = "https://" + (ConfigOption.appName || 'lr') + ".hub.loginradius.com/"+ pagetype + "?action=" + action + "&s=" + LROptionString + "&vtype=" + LRVtype + "&vtoken=" + LRVtoken;
+			LRIframe.src = "https://" + (ConfigOption.appName || 'lr') + ".hub.loginradius.com/"+ pagetype + "?action=" + action + "&s=" + LROptionString + "&vtype=" + LRVtype + "&vtoken=" + LRVtoken+"&return_url="+encodeURIComponent("https://" + (ConfigOption.appName || 'lr') + ".hub.loginradius.com/"+ "profile.aspx" + "?action=" + action + "&s=" + LROptionString + "&vtype=" + LRVtype + "&vtoken=" + LRVtoken);
 		    }
 		} else { 
 			if(ConfigOption.customdomain){ 
-			 LRIframe.src = "https://" + ConfigOption.customdomain + '/'+ pagetype +'?action=' + action + "&s=" + LROptionString;
+			 LRIframe.src = "https://" + ConfigOption.customdomain + '/'+ pagetype +'?action=' + action + "&s=" + LROptionString+"&return_url="+encodeURIComponent("https://" + ConfigOption.customdomain + '/'+ "profile.aspx" +'?action=' + action + "&s=" + LROptionString);
 		   }else{ 
 				if(action)
-					LRIframe.src = "https://" + (ConfigOption.appName || 'lr') + ".hub.loginradius.com/"+ pagetype + "?action=" + action + "&s=" + LROptionString;
+					LRIframe.src = "https://" + (ConfigOption.appName || 'lr') + ".hub.loginradius.com/"+ pagetype + "?action=" + action + "&s=" + LROptionString+"&return_url="+encodeURIComponent("https://" + (ConfigOption.appName || 'lr') + ".hub.loginradius.com/"+ "profile.aspx" + "?action=" + action + "&s=" + LROptionString);
 				else
-					LRIframe.src = "https://" + (ConfigOption.appName || 'lr') + ".hub.loginradius.com/"+ pagetype + "?s=" + LROptionString;
+					LRIframe.src = "https://" + (ConfigOption.appName || 'lr') + ".hub.loginradius.com/"+ pagetype + "?s=" + LROptionString+"&return_url="+encodeURIComponent("https://" + (ConfigOption.appName || 'lr') + ".hub.loginradius.com/"+ "profile.aspx" + "?s=" + LROptionString);
 		   }
 		}
 		if (LRIframeOption) {

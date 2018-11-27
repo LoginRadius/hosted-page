@@ -346,12 +346,11 @@ lr_raas_settings.emailverification = {};
  raasoption.verificationUrl = raasoption.verificationUrl || encodeURIComponent(emailverifyurl);
 
  raasoption.hashTemplate = true;
- raasoption.callbackUrl = window.location.href.split('?')[0];
+ raasoption.callbackUrl = window.location.href;
 
- /* common options to return jwt response */
- raasoption.tokenType = 'jwt';
- raasoption.integrationName = ''; /* your jwt app name */
- 
+ /* Note uncomment this section and provide desired configurations to return JWT response */
+// raasoption.tokenType = 'jwt';
+// raasoption.integrationName = ''; /* your jwt app name */
  var LRObject = new LoginRadiusV2(raasoption);
 
  LRObject.registrationFormSchema = raasoption.registrationFormSchema;

@@ -15,17 +15,8 @@ You'll need to have the LoginRadius V2 Hosted Page enabled for your account, ple
 
 
 ## Installation and Documentation
-This repo contains the default scripts and content for the LoginRadius Hosted Page.
 
-If you're looking to customize your own hosted page we recommend downloading these files
-to your desktop and editing them to your needs. You can find our step-by-step guide to customization [here](https://docs.loginradius.com/api/v2/user-registration/hosted-registration) for more information.
-
-
-
-## Demo
-Your site should be preconfigured with a hosted page running with the same files as this repo by default, the hosted page is located at the following url:
-
-https://{yoursitename}.hub.loginradius.com/auth.aspx
+You can find details on how to implement the LoginRadius iframeSDK with the LoginRadius Hosted Page [here](https://docs.loginradius.com/api/v2/deployment/demos/iframe-implementation-demo)
 
 ## Author
 
