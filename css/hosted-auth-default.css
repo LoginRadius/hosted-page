@@ -31,6 +31,7 @@ body {
     -webkit-font-smoothing: antialiased;
     background-color: #fafafa;
     height: 100%;
+    padding:5px;	
 }
 
 .cf {
@@ -73,6 +74,12 @@ body {
     cursor: pointer;
     -webkit-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
+}
+.lr-button hover{
+background:black;
+color:white;
+	
+
 }
 
     .lr-button.outline-blue {
@@ -145,6 +152,9 @@ h1 {
     font-size: 3.6rem;
     line-height: 4rem;
     margin-bottom: 15px;
+    border: 2px dotted black;
+    border-radius:7px;
+    color:cyan;	
 }
 
 h2 {
@@ -191,6 +201,8 @@ h6 {
 
 p {
     margin: 15px 0;
+	border:2px solid gray;
+	border-radius:5px;
 }
 
 a {
@@ -231,6 +243,11 @@ button {
     -o-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+button :hover{
+background:black;
+	color:white;
+	
 }
 
     input[type="text"]:focus,
