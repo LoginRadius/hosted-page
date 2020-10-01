@@ -24,8 +24,9 @@ to your desktop and editing them to your needs. You can find our step-by-step gu
 
 ## Demo
 Your site should be preconfigured with a hosted page running with the same files as this repo by default, the hosted page is located at the following url:
-
+```
 https://{yoursitename}.hub.loginradius.com/auth.aspx
+```
 
 ## Author
 
