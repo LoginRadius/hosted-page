@@ -5,10 +5,25 @@
 */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600");
 
+/* This is a root psudo class selector */
+:root{
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+body {
+    line-height: 30px;
+    color: #444;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    background-color: #fafafa;
+    height: 100%;
 }
 
 html {
@@ -20,17 +35,6 @@ html {
     html {
         font-size: 62.5%;
     }
-}
-
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
-    line-height: 30px;
-    color: #444;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    background-color: #fafafa;
-    height: 100%;
 }
 
 .cf {
