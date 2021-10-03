@@ -68,7 +68,7 @@ body {
     padding: 0 15px;
     background: #29d;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 4px;
     text-decoration: none;
     cursor: pointer;
     -webkit-transition: all 200ms ease-in-out;
@@ -136,7 +136,7 @@ h3,
 h4,
 h5,
 h6, .loginradius-raas-form-element-content > label {
-    font-weight: 400;
+    font-weight: 390;
 }
 
 h1 {
@@ -158,7 +158,7 @@ h2 {
 h3 {
     font-size: 24px;
     line-height: 30px;
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     line-height: 3rem;
 }
 
